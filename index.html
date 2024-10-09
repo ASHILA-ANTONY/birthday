@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Love!</title>
+    <!-- Linking Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for styles -->
+    <style>
+        body {
+            background-color: #ffebf0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        .container {
+            border: 3px solid #f9a6b9;
+            padding: 20px;
+            max-width: 400px; /* Reduced the width */
+            margin: 0 auto; /* Center the box */
+            background-color: #fff;
+        }
+        h1 {
+            color: #ff5f7a;
+        }
+        .kiran-img{
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .play-music-btn {
+            margin-top: 20px;
+            background-color: #ff5f7a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        /* Animation to make elements float up */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Floats up beyond the screen */
+    }
+}
+        
+        .heart, .balloon {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .heart {
+            background-color: #ff6b81;
+            .heart {
+    clip-path: polygon(50% 0%, 65% 15%, 82% 24%, 100% 42%, 91% 66%, 73% 83%, 50% 100%, 27% 83%, 9% 66%, 0% 42%, 18% 24%, 35% 15%);
+}
+
+            animation-duration: 8s;
+        }
+
+        .balloon {
+            background-color: #ffe066;
+            width: 50px;
+            height: 70px;
+            border-radius: 60% 60% 50% 50%;
+            animation-duration: 9s;
+        }
+
+        /* Additional hearts and balloons */
+        .heart:nth-child(2), .balloon:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3), .balloon:nth-child(3) {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4), .balloon:nth-child(4) {
+            left: 70%;
+            animation-delay: 6s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, My Love!</h1>
+        <img src="kiran.jpeg" alt="mylove" class="kiran-img">
+        
+        <p>Happy birthday to my favourite person. 🎉❤️</p>
+        <button class="play-music-btn" onclick="playAudio()">click me 🎶</button>
+        <audio id="birthdaySong" src="https://www.orangefreesounds.com/wp-content/uploads/2016/08/Happy-birthday-instrumental.mp3"></audio>
+
+        
+    </div>
+     <!-- Adding floating hearts and balloons -->
+     <div class="heart left"></div>
+     <div class="balloon left"></div>
+     <div class="heart right"></div>
+     <div class="balloon right"></div>
+     <div class="heart left"></div>
+     <div class="heart right"></div>
+     <div class="balloon left"></div>
+     <div class="balloon right"></div>
+    
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS for audio -->
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('birthdaySong');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
